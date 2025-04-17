@@ -12,7 +12,8 @@ function Contact() {
     const handleSubmit = (event) => {
       event.preventDefault();
       alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
-      );
+      );};
+
       return (
         <>
           <form onSubmit={handleSubmit}>
@@ -29,9 +30,8 @@ function Contact() {
           </form>
           </>
         );
-  };
+  
 }
   
   export default Contact
 
-  //https://www.freecodecamp.org/news/how-to-build-forms-in-react/
