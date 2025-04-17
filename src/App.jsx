@@ -8,9 +8,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      App
-      <Link to="contact/">contacto</Link>
+    <>  
+      <Link to="/">Home</Link>
+      <Link to="carrito/">Carrito</Link>
+      <Link to="contact/">Contacto</Link>
+      <Link to="registro/">Log In</Link>
     </>
   )
 }

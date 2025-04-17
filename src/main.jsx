@@ -4,6 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import ErrorPage from './ErrorPage.jsx'
 import Contact from './Contact.jsx'
+import Carrito from './Carrito.jsx'
+import LogIn from './LogIn.jsx'
+
+
 
 import {
   createBrowserRouter,
@@ -14,6 +18,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "carrito/",
+    element: <Carrito />,
+  },
+  {
+    path: "registro/",
+    element: <LogIn />,
   },
   {
     path: "contact/",
