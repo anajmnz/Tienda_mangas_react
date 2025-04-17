@@ -1,20 +1,29 @@
-import { useState} from 'react'
-import { Link } from "react-router";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import Card from './components/Card';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [comics, setComics] = useState([]);
+
+  const url = "https://api-onepiece-d9mm.onrender.com/libros";
+
+  useEffect(() => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {setComics(Array.isArray(data) ? data : data.results || []);
+      })
+  }, []);
 
   return (
-    <>  
-      <Link to="/">Home</Link>
-      <Link to="carrito/">Carrito</Link>
-      <Link to="contact/">Contacto</Link>
-      <Link to="registro/">Log In</Link>
+    <>
+      <h1>Comics</h1>
+      <div className="comic-container">
+        {comics.map((comic, index) => (
+          <Card key={index} comic={comic} />
+        ))}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
