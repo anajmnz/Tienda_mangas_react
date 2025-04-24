@@ -4,6 +4,8 @@ import {
   // RedirectToSignIn
 } from "@clerk/clerk-react";
 import { Route, Routes } from "react-router-dom";
+import './index.css';
+
 
 <Routes>
   <Route path="/sign-in/*" element={<SignIn />} />
@@ -13,7 +15,7 @@ import { Route, Routes } from "react-router-dom";
 
  function LoginPage() {
   return (
-    <div>
+    <div id="contenido_login">
       <h2>Iniciar sesión</h2>
       <SignIn />
     </div>
