@@ -1,68 +1,444 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* ESTILOS GENERALES */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+header {
+  background-color: #771212;
+  color: rgb(252, 255, 253);
+  text-align: center;
+  padding: 20px 0;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+header h1 {
+  margin: 0;
+}
+
+nav {
+  text-align: center;
+  background-color: #e61c1c;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ef4444;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none; 
 }
 
-body {
-  margin: 0;
+/* PRODUCTOS */
+#container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  overflow-y: auto;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+.carta-comic-pr {
+  background-color: white;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.imagen-comic-pr {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.titulo-comic-pr {
+  color: #771212;
+}
+
+.descripcion-comic-pr {
+  color: #777;
+}
+
+.comprar-btn-pr {
+  background-color: #771212;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.comprar-btn-pr:hover {
+  background-color: #c42020;
+}
+
+/* INICIO: BEST SELLERS */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  overflow-y: auto;
+}
+
+#titulo-bs {
+  color: #771212;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.numTop {
+  color: #3670af;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+hr {
+  color: #3670af;
+  border: none;
+  height: 1px;
+  background-color: #3670af;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.carta-comic {
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.imagen-comic {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.titulo-comic {
+  color: #771212;
+}
+
+.descripcion-comic {
+  color: #777;
+}
+
+.comprar-btn {
+  background-color: #771212;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.comprar-btn:hover {
+  background-color: #c42020;
+}
+
+/* OFERTAS */
+#nuestras-ofertas{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+#container-ofertas, #container2 {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.packOfertas {
+  background-color: white;
+  border-radius: 8px;
+  margin: 10px;
+  width: 420px; /* Un poco más ancha */
+  min-height: 330px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.packOfertas h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #771212;
+}
+
+/* Contenido de los cómics dentro del pack */
+.contenido-oferta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.simbolo-mas {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 5px;
+  color: #771212;
+}
+
+/* Comic individual dentro del pack */
+.packOfertas .carta-comic {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 120px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.packOfertas .imagen-comic {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.packOfertas .titulo-comic {
+  font-size: 0.95rem;
+  color: #771212;
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+/* Precio + botón */
+.info-oferta {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.precio-oferta {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #771212;
+  margin: 10px 0;
+}
+
+.packOfertas .comprar-btn-pr {
+  background-color: #771212;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.packOfertas .comprar-btn-pr:hover {
+  background-color: #c42020;
+}
+
+/* Responsive para ofertas */
+@media (max-width: 768px) {
+  .packOfertas {
+      width: 95%;
   }
-  a:hover {
-    color: #747bff;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #e61c1c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: rgb(249, 248, 248);
+  text-decoration: none;
+}
+
+footer .social-media {
+  margin-top: 10px;
+}
+
+footer .social-media a {
+  margin: 0 10px;
+}
+
+footer .logos {
+  width: 30px;
+  height: 30px;
+}
+
+.logos {
+  width: 50px;
+  font-display: inline-block;
+}
+
+#facebook {
+  display: inline-block;
+  width: 45px;
+  height: auto;
+}
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .packOfertas {
+      width: 100%; /* En pantallas pequeñas, cada oferta ocupará toda la fila */
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+
+/* APARTADO CARRITO */
+#container-carrito, #container-precio_carrito {
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#container-carrito {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+#container-precio-carrito {
+  width: 25%;
+}
+
+/* div rojo con el precio total*/
+.box-precio-total {
+  background-color: #771212;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+/* Contenedor que tiene los dos containers del carrito */
+.contenedor-flex {
+  display: flex;
+  gap: 20px; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Contenedor del resumen del pedido */
+.box-precio-total {
+  background-color: #fff;
+  border: 2px solid #771212;
+  border-radius: 16px;
+  padding: 24px;
+  padding-right: 18px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  gap: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título del resumen */
+.titulo-pedido {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #771212;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+ 
+/* Detalles de precios */
+.precio-productos,
+.precio-envio,
+.precio-total {
+  font-size: 1.1rem;
+  margin: 4px 0;
+  text-align: right;
+  margin-right: 10%;
+}
+
+/* Precio total con más énfasis */
+.precio-total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #e61c1c;
+  text-align: right;
+}
+
+/* Línea divisoria */
+.box-precio-total hr {
+  width: 95%;
+  border: none;
+  border-top: 2px  #fff;
+  margin: 10px 0;
+}
+
+/* Botón tramitar */
+#tramitar-pedido {
+  background-color: #e61c1c;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: 85%;
+}
+
+#tramitar-pedido:hover {
+  background-color: #ef4444;
+}
+
+.tramitar {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
 }
