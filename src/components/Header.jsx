@@ -18,8 +18,8 @@ function Header() {
           <Link to="contact/">Contacto</Link>
           <Link to="registro/">Log In</Link>
           <SignedIn>
-        <UserButton />
-      </SignedIn>
+           <UserButton />
+        </SignedIn>
       
         </div>
 

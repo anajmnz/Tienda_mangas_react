@@ -5,12 +5,12 @@ function Card({comic}) {
   
     return (
       <>
-       <div className="comic-card">
-                <img src={comic.imagen} alt={comic.nombre} />
-                <h2 id="comic_nombre">{comic.nombre}</h2>
-                <p id="comic_description">{comic.descripcion}</p>
-                <p id="comic_precio">Precio: {comic.precio}€</p>
-                <ButtonCard id="btn_comic">Añadir al carrito</ButtonCard>            
+       <div className="carta-comic-pr ">
+          <img id="imagen-comic-pr" src={comic.imagen} alt={comic.nombre} />
+          <h2 id="titulo-comic-pr">{comic.nombre}</h2>
+          <p id="descripcion-comic-pr">{comic.descripcion}</p>
+          <p id="comic_precio">Precio: {comic.precio}€</p>
+          <ButtonCard id="comprar-btn-pr">Añadir al carrito</ButtonCard>            
        </div>
 
       </>
