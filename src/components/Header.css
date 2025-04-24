@@ -3,26 +3,26 @@
     padding: 0;
     width: 100vw;
     text-align: center;
-    padding: 20px 0;
 }
 
 
 #header_espacio_foto{
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: blue;
     background-color: #771212;
 }
 
 #logo_header{
-    height: 100px;
+    height: 150px;
     width: auto;
+    margin-top: 25px;
 
 }
 
 #header_espacio_nav{
     width: 100%;
-    height: 100px;
+    height: 30px;
     background-color: #e61c1c;
     color: rgb(252, 255, 253);
 }
