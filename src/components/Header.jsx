@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import './Header.css';
+import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 function Header() {
   
@@ -16,6 +17,12 @@ function Header() {
           <Link to="carrito/">Carrito</Link>
           <Link to="contact/">Contacto</Link>
           <Link to="registro/">Log In</Link>
+          <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <a href="/sign-in">Iniciar sesión</a>
+      </SignedOut>
         </div>
 
       </div>
