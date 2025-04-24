@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Card from './components/Card';
-import { Link } from 'react-router-dom';
 import Header from './components/header';
 
 function App() {
@@ -20,12 +19,13 @@ function App() {
     <>
     <Header></Header>
 
-        <h1>Comics</h1>
+      <h1>Comics</h1>
       <div className="comic-container">
         {comics.map((comic, index) => (
           <Card key={index} comic={comic} />
         ))}
       </div>
+
     </>
   );
 }
