@@ -20,9 +20,7 @@ function Header() {
           <SignedIn>
         <UserButton />
       </SignedIn>
-      <SignedOut>
-        <a href="/sign-in">Iniciar sesión</a>
-      </SignedOut>
+      
         </div>
 
       </div>
