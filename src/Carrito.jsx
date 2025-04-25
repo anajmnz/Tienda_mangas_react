@@ -63,8 +63,8 @@ function Carrito() {
             <div className="carta-comic-pr " key={index} >
               <img id="imagen-comic-pr" src={item.imagen} alt={item.nombre} width="100" height="100" />
               <h3 id="titulo-comic-pr">{item.nombre}</h3>
-              <p id="descripcion-comic-pr">{item.descripcion}</p>
-              <p id="comic_precio">Precio: ${item.precio}</p>
+              <p id="descripcion-comic-pr">{item.descripcion.length > 100 ? item.descripcion.slice(0, 100) + '...' : item.descripcion}</p>
+              <p id="comic_precio">Precio: {item.precio}€</p>
               
             </div>
           ))

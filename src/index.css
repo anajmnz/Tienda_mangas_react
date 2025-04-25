@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-
 a {
   text-decoration: none; 
 }
@@ -21,29 +20,42 @@ a {
   width: 100%;
 }
 
-#login{
+#login {
   width: 100vw;
 }
 
-
 /* CARRITO */
-#componentes_carrito{
+#componentes_carrito {
   display: flex;
   gap: 20px; 
   padding: 20px;
   box-sizing: border-box;
 }
 
-.cart-items{
+.cart-items {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
-  width: 60%;
-  
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 65%;
 }
 
-/* Contenedor del resumen del pedido */
+.carta-comic-pr {
+  width: 200px;
+  min-height: 300px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .box-precio-total {
   background-color: #fff;
   border: 2px solid #771212;
@@ -51,17 +63,16 @@ a {
   padding: 24px;
   padding-right: 18px;
   width: 30%;
+  height: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #333;
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
   flex-direction: column;
-  align-items: right;
   gap: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Título del resumen */
 .titulo-pedido {
   font-size: 1.6rem;
   font-weight: bold;
@@ -70,7 +81,6 @@ a {
   text-align: center;
 }
 
- 
 /* Detalles de precios */
 .precio-productos,
 .precio-envio,
@@ -81,28 +91,24 @@ a {
   margin-right: 10%;
 }
 
-/* Precio total con más énfasis */
 .precio-total {
   font-weight: bold;
   font-size: 1.3rem;
   color: #e61c1c;
-  text-align: right;
 }
 
-/* Línea divisoria */
 .box-precio-total hr {
   width: 95%;
   border: none;
-  border-top: 2px  #fff;
+  border-top: 2px solid #fff;
   margin: 10px 0;
 }
 
-/* Botón tramitar */
 #tramitar-pedido {
   background-color: #e61c1c;
   color: white;
   padding: 12px 20px;
-  margin-top: 10px;
+  margin-top: auto;
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
