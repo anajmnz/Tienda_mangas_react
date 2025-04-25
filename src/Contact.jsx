@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './contact.css'
 import Header from "./components/header";
+import Footer from './components/Footer';
 function Contact() { 
   
     const [formData, setFormData] = useState({name: "",email: "",message: ""});
@@ -35,10 +36,11 @@ function Contact() {
             </fieldset>
             <button id="button" type="submit">Enviar</button>
           </form>
+          <Footer></Footer>
           </>
+          
         );
   
 }
-  
   export default Contact
 

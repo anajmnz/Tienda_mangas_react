@@ -6,6 +6,7 @@ import {
 import { Route, Routes } from "react-router-dom";
 import Header from './components/header';
 import './index.css';
+import Footer from './components/Footer';
 
 
 <Routes>
@@ -24,6 +25,7 @@ import './index.css';
       <SignIn></SignIn>
       </div>
       </div>
+    <Footer></Footer>
     </>
     
   );
