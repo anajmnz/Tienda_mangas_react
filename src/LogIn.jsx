@@ -18,10 +18,12 @@ import './index.css';
   return (
     <>
     <Header></Header>
-    <div id="contenido_login">
+    <div id="login">
       <h2>Iniciar sesión</h2>
-      <SignIn />
-    </div>
+      <div id="contenedor_signin">
+      <SignIn></SignIn>
+      </div>
+      </div>
     </>
     
   );

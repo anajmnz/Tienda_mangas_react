@@ -10,14 +10,16 @@ a {
   text-decoration: none; 
 }
 
-#contenido_login{
+#contenedor_signin {
   display: flex;
-flex-wrap: wrap;}
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  width: 100%;
+}
 
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  .packOfertas {
-      width: 100%; /* En pantallas pequeñas, cada oferta ocupará toda la fila */
-  }
+#login{
+  width: 100vw;
 }
 
