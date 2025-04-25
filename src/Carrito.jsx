@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/header";
 import Footer from './components/Footer';
 import './index.css'
-
+import { SignIn, useAuth } from "@clerk/clerk-react";
 
 
 function Carrito() {
@@ -32,6 +32,23 @@ function Carrito() {
     localStorage.setItem('pedido', JSON.stringify(pedido));
 
   };
+
+  const { userId, sessionId, getToken, isLoaded, isSignedIn } = useAuth();
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+
+  if (!isSignedIn) {
+    return (<div>
+      <Header></Header>
+      <SignIn></SignIn>
+      <Footer></Footer>
+      </div>
+    );
+    
+  }
+
 
   return (
     <>
