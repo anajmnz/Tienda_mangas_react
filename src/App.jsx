@@ -12,23 +12,27 @@ function App() {
   useEffect(() => {
     fetch(url)
       .then(response => response.json())
-      .then(data => {setComics(Array.isArray(data) ? data : data.results || []);
-      })
+      .then(data => {
+        console.log(data);
+        setComics(Array.isArray(data) ? data : data.results || []);
+      });
   }, []);
+
+  const handleAddToCart = (updatedCart) => {
+    // Actualiza el carrito al añadir un producto
+    setCart(updatedCart);
+  };
 
   return (
     <>
-    <Header></Header>
-
+      <Header />
       <h1>Comics</h1>
       <div className="comic-container">
         {comics.map((comic, index) => (
-          <Card key={index} comic={comic} />
+          <Card key={index} comic={comic} onAddToCart={handleAddToCart} />
         ))}
       </div>
-
       <Footer />
-
     </>
   );
 }
