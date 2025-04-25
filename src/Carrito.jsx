@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/header";
+import Footer from './components/Footer';
+
 
 function Carrito() {
   const [cart, setCart] = useState([]);
@@ -65,6 +67,7 @@ function Carrito() {
           <p className="tramitar">Tramitar pedido</p>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }
