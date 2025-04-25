@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Card from './components/Card';
+import Footer from './components/Footer';
 import Header from './components/header';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Card key={index} comic={comic} />
         ))}
       </div>
+
+      <Footer />
 
     </>
   );

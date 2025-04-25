@@ -1,0 +1,66 @@
+/* ===== Estilos generales para el footer ===== */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Contenedor de redes sociales ===== */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegura alineación vertical */
+    gap: 20px;           /* Espacio entre íconos */
+    margin-top: 15px;
+}
+
+/* ===== Estilos para los íconos de redes sociales ===== */
+.logos {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;        /* Mantiene proporción sin deformar */
+    border-radius: 50%;         /* Íconos en forma de círculo */
+    background-color: rgb(188, 33, 33);    /* Fondo blanco uniforme */
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#facebook{
+    width: 32px;
+}
+/* Hover effect */
+.logos:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Responsivo para pantallas pequeñas ===== */
+@media (max-width: 600px) {
+    .social-media {
+        flex-direction: column;
+    }
+
+    .logos {
+        margin: 10px 0;
+    }
+
+    footer p {
+        font-size: 0.85em;
+    }
+}
