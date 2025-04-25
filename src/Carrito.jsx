@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Header from "./components/header";
 import Footer from './components/Footer';
+import './index.css'
+
 
 
 function Carrito() {
@@ -36,14 +38,17 @@ function Carrito() {
       <Header />
       <h1>Carrito</h1>
 
+      <div id="componentes_carrito">
+
       <div className="cart-items">
         {cart.length > 0 ? (
           cart.map((item, index) => (
-            <div key={index} className="cart-item">
-              <img src={item.imagen} alt={item.nombre} width="100" height="100" />
-              <h3>{item.nombre}</h3>
-              <p>Precio: ${item.precio}</p>
-              <p>{item.descripcion}</p>
+            <div className="carta-comic-pr " key={index} >
+              <img id="imagen-comic-pr" src={item.imagen} alt={item.nombre} width="100" height="100" />
+              <h3 id="titulo-comic-pr">{item.nombre}</h3>
+              <p id="descripcion-comic-pr">{item.descripcion}</p>
+              <p id="comic_precio">Precio: ${item.precio}</p>
+              
             </div>
           ))
         ) : (
@@ -66,6 +71,7 @@ function Carrito() {
         <div id="tramitar-pedido" onClick={handleTramitarPedido}>
           <p className="tramitar">Tramitar pedido</p>
         </div>
+      </div>
       </div>
       <Footer></Footer>
     </>
