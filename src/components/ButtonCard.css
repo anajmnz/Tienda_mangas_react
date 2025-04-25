@@ -1,14 +1,22 @@
 #btn {
     background-color: #771212;
     color: white;
-    padding: 2px;
     border: none;
+    height: 40px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    width: 80%;
-    margin-left: 10%;}
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+    
+
+}
 
     #btn:hover {
     background-color: #c42020;
 }
+
