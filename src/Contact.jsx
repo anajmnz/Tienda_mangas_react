@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './contact.css'
 import Header from "./components/header";
-function Contact() {
+function Contact() { 
   
     const [formData, setFormData] = useState({name: "",email: "",message: ""});
   
@@ -18,22 +18,22 @@ function Contact() {
       return (
         <> 
         <Header></Header>
-        <h1 id="h1Contacto">¡Contacta con nosotros!</h1>
           <form id="contact-form" onSubmit={handleSubmit}>
+          <h1 id="h1Contacto">¡Contacta con nosotros!</h1>
             <fieldset>
             <label htmlFor="name">Nombre</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange}/>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" value={formData.name} onChange={handleChange}/>
             </fieldset>
             <fieldset>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange}/>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" value={formData.email} onChange={handleChange}/>
             </fieldset>
+            
             <fieldset>
             <label htmlFor="message">Mensaje</label>
-            <textarea id="message" name="message" value={formData.message} onChange={handleChange}/>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje" value={formData.message} onChange={handleChange}/>
             </fieldset>
             <button id="button" type="submit">Enviar</button>
-
           </form>
           </>
         );
