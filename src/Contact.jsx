@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './contact.css'
-
+import Header from "./components/header";
 function Contact() {
   
     const [formData, setFormData] = useState({name: "",email: "",message: ""});
@@ -16,7 +16,9 @@ function Contact() {
       );};
 
       return (
-        <> <h1 id="h1Contacto">¡Contacta con nosotros!</h1>
+        <> 
+        <Header></Header>
+        <h1 id="h1Contacto">¡Contacta con nosotros!</h1>
           <form id="contact-form" onSubmit={handleSubmit}>
             <fieldset>
             <label htmlFor="name">Nombre</label>
