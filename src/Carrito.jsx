@@ -40,11 +40,19 @@ function Carrito() {
   }
 
   if (!isSignedIn) {
-    return (<div>
+    return (
+    <div>
       <Header></Header>
-      <SignIn></SignIn>
+      <div id="login">
+        <h2>Inicia sesión para ver el carrito</h2>
+        <div id="contenedor_signin">
+        <SignIn></SignIn>
+        </div>
+        </div>
       <Footer></Footer>
-      </div>
+    </div>
+    
+      
     );
     
   }
