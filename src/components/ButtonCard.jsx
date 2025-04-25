@@ -1,9 +1,12 @@
+import './ButtonCard.css';
+
+
 function ButtonCard() {
   
 
     return (
       <>
-       <div>
+       <div id='btn'>
         <p>Añadir a carrito</p>
        </div>
       </>

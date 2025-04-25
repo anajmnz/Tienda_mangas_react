@@ -1,0 +1,14 @@
+#btn {
+    background-color: #771212;
+    color: white;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;}
+
+    #btn:hover {
+    background-color: #c42020;
+}
